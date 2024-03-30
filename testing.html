@@ -31,4 +31,19 @@
 </div>
 
 </body>
+<script>
+  window.onload = function() {
+    // Get the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Check if the 'v' parameter exists in the URL
+    if(urlParams.has('v')) {
+      // Extract the video ID from the URL
+      const videoId = urlParams.get('v');
+      
+      // Set the src attribute of the iframe with the video ID
+      document.getElementById('youtube-video').src = 'https://www.youtube.com/embed/' + videoId;
+    }
+  }
+  </script>
 </html>
