@@ -3,10 +3,33 @@
 <head>
 <title>PDF Example</title>
 </head>
+<style>
+    body{
+      background-color: #11191D;
+    }
+    .pdf-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      margin-bottom: 20px;
+    }
+    .pdf-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow:hidden;
+      border:none; 
+    }
+  </style>
 <body>
   <!-- <embed src="test.pdf" type="application/pdf" allowfullscreen  /> -->
-  <iframe allowfullscreen src="./test.pdf" style="position:absolute; top:0; left:0; width:100%; height:100%; border:none; overflow:hidden;"></iframe>
-
+  <div class="pdf-container">
+      <!-- Replace VIDEO_ID with your YouTube video ID -->
+      <iframe id="pdf-view" allowfullscreen src="./test.pdf"></iframe>
+    <!-- <iframe id="youtube-video" src="https://www.youtube.com/embed/ZWIpScBqIko" frameborder="0" allowfullscreen></iframe> -->
+  </div>
     
 </body>
 </html>
